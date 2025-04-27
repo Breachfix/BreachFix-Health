@@ -1,0 +1,33 @@
+{
+  "name": "breachfix-health",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/Breachfix/BreachFix-Health#readme",
+  "bugs": {
+    "url": "https://github.com/Breachfix/BreachFix-Health/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Breachfix/BreachFix-Health.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "../index.html",
+  "scripts": {
+    "start": "http-server .", 
+    "build": "echo \"No build step needed for static project\"",
+    "test": "echo \"No test script specified\"",
+    "deploy": "echo \"Deploy your static site here\""
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "parcel-bundler": "^1.12.5"
+  },
+  "dependencies": {
+    "react-scripts": "^5.0.1",
+    "resolve-url-loader": "^5.0.0",
+    "svgo": "^3.3.2",
+    "webpack-dev-middleware": "^7.4.2"
+  }
+}
