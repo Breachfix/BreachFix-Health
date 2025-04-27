@@ -16,9 +16,9 @@
   "main": "../index.html",
   "scripts": {
     "start": "http-server .", 
-    "build": "echo \"No build step needed for static project\"",
+    "build": "npm run start" ,
     "test": "echo \"No test script specified\"",
-    "deploy": "echo \"Deploy your static site here\""
+   "deploy": "npm run start" 
   },
   "devDependencies": {
     "http-server": "^14.1.1",
