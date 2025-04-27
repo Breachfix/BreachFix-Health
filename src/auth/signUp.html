@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>login</title>
+  <link rel="stylesheet" href="/src/css/auth.css" />
+    <link rel="stylesheet" href="/src/css/App.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-white text-gray-800 font-sans">
+    <!-- Navbar -->
+    <nav class="bg-green-600 text-white p-4 flex justify-between items-center shadow-md">
+           <!-- Logo and Brand -->
+    <div class="flex items-center gap-3">
+      <img src="/src/images/6.svg" alt="BreachFix Logo" class="w-30 h-20 object-contain" />
+      
+    </div>
+      <ul class="flex gap-6">
+        <li><a href="/index.html" class="hover:underline">Home</a></li>
+        <li><a href="/explore.html" class="hover:underline">Courses</a></li>
+        <li><a href="/event.html" class="hover:underline">Events</a></li>
+        <li><a href="/src/auth/login.html" class="hover:underline">Login</a></li>
+      </ul>
+    </nav>
+
+    <!-- Hero Section -->
+<section class="hero">
+    <h2>Welcome to Your Health Journey</h2>
+    <p>Join our events and courses to learn how to live a healthier, purpose-driven life.</p>
+    <a href="/explore.html" class="inline-block mt-6 bg-white text-green-700 font-semibold px-6 py-2 rounded shadow hover:bg-gray-100 transition">
+      Explore Courses
+    </a>
+  </section>
+
+  <!-- Pop-up Placeholder -->
+  <div id="popup" class="hidden fixed top-4 right-4 bg-white border border-green-600 p-4 shadow-lg rounded-lg">
+    <p class="text-green-700">📢 New Event This Weekend! Check it out!</p>
+  </div>
+<div class="auth-container">
+    <h2>Create Account</h2>
+    <form id="signup-form">
+      <label for="signup-name">Full Name</label>
+      <input type="text" id="signup-name" placeholder="Your Name" required />
+  
+      <label for="signup-email">Email</label>
+      <input type="email" id="signup-email" placeholder="you@example.com" required />
+  
+      <label for="signup-password">Password</label>
+      <input type="password" id="signup-password" placeholder="Create a password" required />
+  
+      <button type="submit">Sign Up</button>
+      <p class="auth-link">Already have an account? <a href="/login.html">Login</a></p>
+    </form>
+  </div>
+
+
+     <!-- Chatbot -->
+<div id="chat-icon" class="fixed bottom-6 right-6 bg-green-600 text-white p-4 rounded-full shadow-lg cursor-pointer z-50">
+    💬
+  </div>
+  
+  <div id="chat-box" class="hidden fixed bottom-20 right-6 w-80 bg-white border border-gray-300 rounded-lg shadow-lg z-50">
+    <div class="p-4 border-b bg-green-600 text-white font-bold">Health Assistant</div>
+    <div id="chat-messages" class="p-4 h-64 overflow-y-auto text-sm space-y-2"></div>
+    <div class="p-2 border-t flex">
+      <input id="chat-input" type="text" placeholder="Ask a question..." class="flex-1 border p-2 rounded-l text-sm"/>
+      <button id="chat-send" class="bg-green-600 text-white px-4 rounded-r">Send</button>
+    </div>
+  </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-grid">
+          <div class="footer-section">
+            <h4>About Us</h4>
+            <p>HealthLift helps you learn, grow, and live better. Courses, events, and support — all in one place.</p>
+          </div>
+          <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="/event.html">Events</a></li>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/explore.html">Courses</a></li>
+                <li><a href="/shop.html">Shop</a></li>
+                <li><a href="/faqs.html">FAQs</a></li>
+              </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Follow Us</h4>
+            <div class="social-links">
+                <a href="https://x.com/NtihanirahoJack" title="X">
+                  <img class="icon-x" src="https://cdn.simpleicons.org/x/ffffff" alt="X" />
+                </a>
+                <a href="https://www.instagram.com/breachfix/" title="Instagram">
+                  <img class="icon-instagram" src="https://cdn.simpleicons.org/instagram/ffffff" alt="Instagram" />
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=61559916151082&sk=grid" title="Facebook">
+                  <img class="icon-facebook" src="https://cdn.simpleicons.org/facebook/ffffff" alt="Facebook" />
+                </a>
+                <a href="https://github.com/Breachfix" title="GitHub">
+                  <img class="icon-github" src="https://cdn.simpleicons.org/github/ffffff" alt="GitHub" />
+                </a>
+                <a href="https://www.youtube.com/@Breachfixhealth" title="YouTube">
+                  <img class="icon-youtube" src="https://cdn.simpleicons.org/youtube/ffffff" alt="YouTube" />
+                </a>
+                <a href="https://www.tiktok.com/@breachfixhealth" title="TikTok">
+                  <img class="icon-tiktok" src="https://cdn.simpleicons.org/tiktok/ffffff" alt="TikTok" />
+                </a>
+              </div>
+          </div>
+          <div class="footer-section">
+            <h4>Subscribe</h4>
+            <form>
+              <input type="email" placeholder="Your email" />
+              <button type="submit">Subscribe</button>
+            </form>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 BreachFix HEALTH. All rights reserved.</p>
+          <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        </div>
+      </footer>
+     
+      <!-- Scripts -->
+      <script src="/src/js/chatbot.js"></script>
+      <script src="/src/js/eventPopup.js"></script>
+      <script>
+        const icons = {
+          x: {
+            default: 'https://cdn.simpleicons.org/x/ffffff',
+            color: 'https://cdn.simpleicons.org/x/000000'
+          },
+          instagram: {
+            default: 'https://cdn.simpleicons.org/instagram/ffffff',
+            color: 'https://cdn.simpleicons.org/instagram/E4405F'
+          },
+          facebook: {
+            default: 'https://cdn.simpleicons.org/facebook/ffffff',
+            color: 'https://cdn.simpleicons.org/facebook/1877F2'
+          },
+          github: {
+            default: 'https://cdn.simpleicons.org/github/ffffff',
+            color: 'https://cdn.simpleicons.org/github/181717'
+          },
+          youtube: {
+            default: 'https://cdn.simpleicons.org/youtube/ffffff',
+            color: 'https://cdn.simpleicons.org/youtube/FF0000'
+          },
+          tiktok: {
+            default: 'https://cdn.simpleicons.org/tiktok/ffffff',
+            color: 'https://cdn.simpleicons.org/tiktok/000000'
+          }
+        };
+      
+        document.querySelectorAll('.social-links img').forEach(img => {
+          const platform = img.className.replace('icon-', '');
+      
+          if (icons[platform]) {
+            img.addEventListener('mouseenter', () => {
+              img.src = icons[platform].color;
+            });
+            img.addEventListener('mouseleave', () => {
+              img.src = icons[platform].default;
+            });
+          }
+        });
+      </script>
+      <script>
+        const testimonies = [
+          document.getElementById('testimony1'),
+          document.getElementById('testimony2'),
+          document.getElementById('testimony3')
+        ];
+        
+        let current = 0;
+      
+        setInterval(() => {
+          testimonies[current].classList.add('hidden');
+          current = (current + 1) % testimonies.length;
+          testimonies[current].classList.remove('hidden');
+        }, 15000); // 15 seconds
+      </script>
+      <script>
+            const slides = document.querySelectorAll('.testimonial-slide');
+            let currentIndex = 0;
+        
+            function showNextSlide() {
+              slides[currentIndex].classList.add('hidden');
+              currentIndex = (currentIndex + 1) % slides.length;
+              slides[currentIndex].classList.remove('hidden');
+            }
+        
+            setInterval(showNextSlide, 7000); // Change every 7 seconds
+      </script>
+    
+  </body>
+    
+</html>

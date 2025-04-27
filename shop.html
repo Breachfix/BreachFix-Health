@@ -1,0 +1,190 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="src/css/App.css">
+  <link rel="stylesheet" href="/src/css/shop.css" />
+  <title>Breachfix Health</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-gray-800 font-sans">
+
+  <!-- Navbar -->
+  <nav class="bg-green-600 text-white p-4 flex justify-between items-center shadow-md">
+    <div class="flex items-center gap-3">
+      <img src="src/images/6.svg" alt="BreachFix Logo" class="w-30 h-20 object-contain" />
+    </div>
+    <ul class="flex gap-6">
+      <li><a href="index.html" class="hover:underline">Home</a></li>
+      <li><a href="explore.html" class="hover:underline">Courses</a></li>
+      <li><a href="event.html" class="hover:underline">Events</a></li>
+      <li><a href="src/auth/login.html" class="hover:underline">Login</a></li>
+    </ul>
+  </nav>
+
+
+  <!-- Floating Cart Icon -->
+<div class="fixed bottom-6 lg:bottom-10 right-6 bg-green-600 text-white px-4 py-2 rounded-full shadow-lg cursor-pointer flex items-center gap-2 z-50" onclick="toggleCart()">
+    🛒 <span id="cart-count">0</span>
+  </div>
+
+<!-- Slide-out Cart Drawer -->
+<div id="cart-drawer" class="fixed top-0 right-0 h-full w-80 bg-white shadow-lg z-50 transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col">
+    <!-- Header -->
+    <div class="p-4 border-b flex justify-between items-center">
+      <h2 class="text-xl font-semibold">Your Cart</h2>
+      <button onclick="toggleCart()" class="text-red-600 text-xl">&times;</button>
+    </div>
+  
+    <!-- Scrollable Content -->
+    <div class="flex-1 overflow-y-auto p-4 space-y-4">
+      <ul id="cart-items" class="space-y-4"></ul>
+      <div id="cart-empty" class="text-gray-500 text-center">Your cart is empty.</div>
+    </div>
+  
+    <!-- Footer -->
+    <div class="p-4 border-t">
+      <p class="text-lg font-semibold">Total: $<span id="total">0.00</span></p>
+      <button onclick="checkout()" class="mt-4 w-full bg-green-600 text-white py-2 rounded hover:bg-green-700">
+        Proceed to Payment
+      </button>
+    </div>
+  </div>
+
+  <div class="shop-container p-8">
+    <h1 class="text-3xl font-bold mb-6 text-center">Our Shop</h1>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      
+      <div class="product bg-white p-4 rounded shadow hover:shadow-md">
+        <img src="/src/images/6.JPG" alt="Product Image" class="w-full h-48 object-cover mb-4 rounded"/>
+        <h3 class="text-xl font-semibold">Nutrition Guide</h3>
+        <p class="price text-green-600 text-lg font-bold">$19.99</p>
+        <input type="number" value="1" min="1" class="quantity border rounded p-1 w-full mt-2" />
+        <button onclick="addToCart('nutrition-guide', 'Nutrition Guide', 19.99, this)" class="mt-2 w-full bg-green-600 text-white py-2 rounded hover:bg-green-700">Add to Cart</button>
+      </div>
+  
+      <div class="product bg-white p-4 rounded shadow hover:shadow-md">
+        <img src="/src/images/5.JPG" alt="Product Image" class="w-full h-48 object-cover mb-4 rounded"/>
+        <h3 class="text-xl font-semibold">Health eBook</h3>
+        <p class="price text-green-600 text-lg font-bold">$9.99</p>
+        <input type="number" value="1" min="1" class="quantity border rounded p-1 w-full mt-2" />
+        <button onclick="addToCart('health-ebook', 'Health eBook', 9.99, this)" class="mt-2 w-full bg-green-600 text-white py-2 rounded hover:bg-green-700">Add to Cart</button>
+      </div>
+  
+      <div class="product bg-white p-4 rounded shadow hover:shadow-md">
+        <img src="/src/images/3.JPG" alt="Product Image" class="w-full h-48 object-cover mb-4 rounded"/>
+        <h3 class="text-xl font-semibold">1-on-1 Coaching Session</h3>
+        <p class="price text-green-600 text-lg font-bold">$49.99</p>
+        <input type="number" value="1" min="1" class="quantity border rounded p-1 w-full mt-2" />
+        <button onclick="addToCart('coaching-session', '1-on-1 Coaching Session', 49.99, this)" class="mt-2 w-full bg-green-600 text-white py-2 rounded hover:bg-green-700">Add to Cart</button>
+      </div>
+  
+    </div>
+  </div>
+  <div class="cart-spacer hidden lg:block h-24"></div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-grid">
+          <div class="footer-section">
+            <h4>About Us</h4>
+            <p>HealthLift helps you learn, grow, and live better. Courses, events, and support — all in one place.</p>
+          </div>
+          <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="event.html">Events</a></li>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="explore.html">Courses</a></li>
+              <li><a href="shop.html">Shop</a></li>
+              <li><a href="faqs.html">FAQs</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Follow Us</h4>
+            <div class="social-links">
+                <a href="https://x.com/NtihanirahoJack" title="X">
+                  <img class="icon-x" src="https://cdn.simpleicons.org/x/ffffff" alt="X" />
+                </a>
+                <a href="https://www.instagram.com/breachfix/" title="Instagram">
+                  <img class="icon-instagram" src="https://cdn.simpleicons.org/instagram/ffffff" alt="Instagram" />
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=61559916151082&sk=grid" title="Facebook">
+                  <img class="icon-facebook" src="https://cdn.simpleicons.org/facebook/ffffff" alt="Facebook" />
+                </a>
+                <a href="https://github.com/Breachfix" title="GitHub">
+                  <img class="icon-github" src="https://cdn.simpleicons.org/github/ffffff" alt="GitHub" />
+                </a>
+                <a href="https://www.youtube.com/@Breachfixhealth" title="YouTube">
+                  <img class="icon-youtube" src="https://cdn.simpleicons.org/youtube/ffffff" alt="YouTube" />
+                </a>
+                <a href="https://www.tiktok.com/@breachfixhealth" title="TikTok">
+                  <img class="icon-tiktok" src="https://cdn.simpleicons.org/tiktok/ffffff" alt="TikTok" />
+                </a>
+              </div>
+          </div>
+          <div class="footer-section">
+            <h4>Subscribe</h4>
+            <form>
+              <input type="email" placeholder="Your email" />
+              <button type="submit">Subscribe</button>
+            </form>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 BreachFix HEALTH. All rights reserved.</p>
+          <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        </div>
+      </footer>
+     
+      <!-- Scripts -->
+      <script src="src/js/chatbot.js"></script>
+      <script src="src/js/shop.js"></script>
+      <script>
+        const icons = {
+          x: {
+            default: 'https://cdn.simpleicons.org/x/ffffff',
+            color: 'https://cdn.simpleicons.org/x/000000'
+          },
+          instagram: {
+            default: 'https://cdn.simpleicons.org/instagram/ffffff',
+            color: 'https://cdn.simpleicons.org/instagram/E4405F'
+          },
+          facebook: {
+            default: 'https://cdn.simpleicons.org/facebook/ffffff',
+            color: 'https://cdn.simpleicons.org/facebook/1877F2'
+          },
+          github: {
+            default: 'https://cdn.simpleicons.org/github/ffffff',
+            color: 'https://cdn.simpleicons.org/github/181717'
+          },
+          youtube: {
+            default: 'https://cdn.simpleicons.org/youtube/ffffff',
+            color: 'https://cdn.simpleicons.org/youtube/FF0000'
+          },
+          tiktok: {
+            default: 'https://cdn.simpleicons.org/tiktok/ffffff',
+            color: 'https://cdn.simpleicons.org/tiktok/000000'
+          }
+        };
+      
+        document.querySelectorAll('.social-links img').forEach(img => {
+          const platform = img.className.replace('icon-', '');
+      
+          if (icons[platform]) {
+            img.addEventListener('mouseenter', () => {
+              img.src = icons[platform].color;
+            });
+            img.addEventListener('mouseleave', () => {
+              img.src = icons[platform].default;
+            });
+          }
+        });
+      </script>
+
+    
+</body>
+    
+</html>

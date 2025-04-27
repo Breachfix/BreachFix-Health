@@ -1,0 +1,241 @@
+/* General Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #97cfc46f;
+    color: #333;
+  }
+  
+  /* Container */
+  .event-list {
+    padding: 2rem 1rem;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  /* Event Grid */
+  .event-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+ 
+  .event-wrapper > .event {
+    flex: 1 1 300px;
+    max-width: 400px;
+    min-width: 280px; /* ✅ Add this line */
+  }
+  
+  .event img,
+.event iframe {
+  height: 50vw; 
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  min-height: 180px; /* ✅ Ensures it's still visible even when small */
+}
+  /* Event Card */
+  .event {
+    background: #fff;
+    border-left: 5px solid #4caf50;
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .event:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  }
+  
+  .event h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  .event .info {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+  }
+  
+  /* Countdown */
+  .event .countdown {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #e53935;
+    font-family: 'Courier New', monospace;
+    animation: pulse 1s infinite;
+    text-align: center;
+  }
+  
+  .event .countdown-label {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 0.5rem;
+    color: #222;
+  }
+  
+  @keyframes pulse {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.05); opacity: 0.8; }
+    100% { transform: scale(1); opacity: 1; }
+  }
+  
+  /* Buttons */
+  .event a.button,
+  .button {
+    display: inline-block;
+    background-color: #4caf50;
+    color: #fff;
+    padding: 0.6rem 1.2rem;
+    margin-top: 1rem;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+    text-align: center;
+    font-size: 1rem;
+  }
+  
+  .event a.button:hover,
+  .event a.button:focus,
+  .button:hover {
+    background-color: #388e3c;
+  }
+  
+  /* Alternate Button Color */
+  .button {
+    background-color: #b4ef2a;
+  }
+  
+  .button:hover {
+    background-color: #65aa06;
+  }
+  
+  /* Flip Clock */
+  .flip-clock {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+  }
+  
+  .flip-box {
+    text-align: center;
+  }
+  
+  .flip-unit-title {
+    font-weight: bold;
+    font-size: 1rem;
+    color: #444;
+    margin-bottom: 0.5rem;
+    text-transform: capitalize;
+  }
+  
+  .flip-card {
+    width: 70px;
+    height: 90px;
+    background: #1b5e20;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: bold;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.6s ease;
+  }
+  
+  .flip-num.flip-animate {
+    animation: flip 0.6s ease-in-out;
+  }
+  
+  @keyframes flip {
+    0% { transform: rotateX(0); }
+    50% { transform: rotateX(90deg); }
+    100% { transform: rotateX(0); }
+  }
+  
+ /* Responsive Images and Iframes */
+.event img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    max-height: 250px;
+  }
+  
+  /* Make iframes (e.g., YouTube videos) responsive */
+  .event iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+  }
+  
+  @media (max-width: 480px) {
+    .event {
+      padding: 1.25rem 1rem;
+    }
+  
+    .event h3 {
+      font-size: 1.3rem;
+    }
+  
+    .flip-card {
+      width: 50px;
+      height: 70px;
+      font-size: 1.2rem;
+    }
+  
+    .button {
+      font-size: 0.9rem;
+      padding: 8px 16px;
+    }
+  
+    .event .countdown {
+      font-size: 1.5rem;
+    }
+  
+    /* ✅ Add this for better spacing */
+    .event img,
+    .event iframe {
+      max-height: none;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .event h3 {
+      font-size: 1.3rem;
+    }
+  
+    .flip-card {
+      width: 50px;
+      height: 70px;
+      font-size: 1.2rem;
+    }
+  
+    .button {
+      font-size: 0.9rem;
+      padding: 8px 16px;
+    }
+  
+    .event .countdown {
+      font-size: 1.5rem;
+    }
+  }

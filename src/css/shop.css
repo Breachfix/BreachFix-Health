@@ -1,0 +1,316 @@
+html {
+    scroll-behavior: smooth;
+  }
+  .shop-container {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 1rem;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #1e40af;
+  }
+  
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  justify-content: center;
+}
+
+.product {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.07);
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product:hover {
+  transform: scale(1.02);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.product img {
+    aspect-ratio: 4 / 3; /* Or 16/9, 1/1 depending on what fits best */
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.product h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.price {
+  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
+  color: #059669;
+  font-weight: 700;
+}
+
+.product input[type="number"] {
+  width: 80px;
+  padding: 0.4rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.product button {
+  background-color: #059669;
+  color: white;
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  width: 100%;
+}
+
+.product button:hover {
+  background-color: #047857;
+  transform: scale(1.02);
+}
+  
+  .product input[type="number"] {
+    width: 60px;
+    margin: 0.5rem 0;
+    padding: 0.3rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+  }
+  
+  .product button {
+    background: #2563eb;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .product button:hover {
+    background: #1d4ed8;
+  }
+  
+  .cart-summary {
+    margin-top: 3rem;
+    border-top: 1px solid #ddd;
+    padding-top: 2rem;
+  }
+  
+  .cart-summary h2 {
+    margin-bottom: 1rem;
+  }
+  
+  #cart-items {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1rem;
+  }
+  
+  #cart-items li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .cart-icon {
+    position: fixed;
+    top: 60%;
+    right: 20px;
+    transform: translateY(-50%);
+    background: #2563eb;
+    color: #fff;
+    padding: 0.6rem 1rem;
+    border-radius: 999px;
+    cursor: pointer;
+    z-index: 1000;
+    font-weight: bold;
+  }
+  
+  .cart-icon span {
+    background: #f87171;
+    border-radius: 50%;
+    padding: 2px 8px;
+    margin-left: 5px;
+  }
+  
+  .cart-drawer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 350px;
+    height: 100%;
+    background: #fff;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    transform: translateX(100%); /* Fully off-screen to the right */
+    transition: transform 0.3s ease;
+    z-index: 999;
+  }
+  
+  .cart-drawer.open {
+    transform: translateX(0); /* Slide into view */
+  }
+  body.drawer-open .cart-icon {
+    right: 380px;
+  }
+  
+  .cart-drawer.open {
+    right: 0;
+  }
+  
+  .cart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .cart-header h2 {
+    margin: 0;
+  }
+  
+  #drawer-items {
+    list-style: none;
+    padding: 0;
+    max-height: 300px;
+    overflow-y: auto;
+  }
+  
+  #drawer-items li {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .cart-total {
+    font-weight: bold;
+    margin-top: 1rem;
+  }
+  .cart-summary button {
+    background-color: #2563eb;  /* Tailwind blue-600 */
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    width: 100%;
+    margin-top: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .cart-summary button:hover {
+    background-color: #1d4ed8;  /* Slightly darker blue */
+    transform: scale(1.02);
+  }
+  
+  .cart-summary button:active {
+    background-color: #1e40af;  /* Even darker when clicked */
+    transform: scale(0.98);
+  }
+  @media (max-width: 900px) {
+    .product {
+      width: 45%;
+    }
+  
+    .cart-drawer {
+      width: 80%;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .products {
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+  
+    .product {
+      width: 100%;
+    }
+  
+    .cart-icon {
+      top: auto;
+      bottom: 20px;
+      right: 20px;
+      transform: none;
+    }
+  
+    .cart-drawer {
+      width: 100%;
+    }
+  }
+  /* Large screen: drawer is 350px, offset icon */
+@media (min-width: 901px) {
+    .cart-drawer.open ~ .cart-icon {
+      right: 380px; /* drawer width (350px) + gap */
+    }
+  }
+  
+  /* Tablet: drawer is 80% width, offset icon */
+  @media (max-width: 900px) and (min-width: 601px) {
+    .cart-drawer.open ~ .cart-icon {
+      right: 82%; /* slightly more than drawer width */
+    }
+  }
+  
+@media (max-width: 600px) {
+  .cart-icon {
+    position: fixed;
+    top: 50%; /* vertically centered */
+    height: 45px;
+    right: 10px; /* on the right side */
+    transform: translateY(-50%);
+    z-index: 1001; /* make sure it’s on top of other elements */
+  }
+
+  .cart-drawer {
+    width: 100%;
+    z-index: 1000;
+  }
+
+  /* Keep the cart icon visible even when the drawer is open */
+  .cart-drawer.open ~ .cart-icon {
+    display: block;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+  }
+}
+.quantity {
+    width: 60px;
+    margin: 0.5rem 0;
+    padding: 0.3rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+  }
+  
+  #drawer-items li span {
+    display: inline-block;
+    width: 48%;
+    font-size: 0.95rem;
+  }
+  /* Landscape mode targeting phones */
+@media (max-width: 900px) and (orientation: landscape) {
+    .products {
+      grid-template-columns: repeat(2, 1fr); /* prevent too many columns */
+      gap: 1.5rem;
+    }
+  
+    .product img {
+      aspect-ratio: 4 / 3;
+      max-height: none; /* Prevent image from stretching vertically */
+    }
+  }

@@ -7,7 +7,7 @@
   
   /* Body styling */
   body {
-    background-color: #f9f9f9;
+    background-color: #97cfc46f;
     color: #333;
     line-height: 1.6;
     padding: 0;
@@ -16,8 +16,8 @@
   
   /* Navbar */
   nav {
-    background-color: #a8ea2d;
-    color: white;
+    background-color: #97cfc46f;
+    color: rgba(255, 255, 255, 0.243);
     padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
@@ -45,14 +45,33 @@
   nav ul li a:hover {
     color: #d1fae5;
   }
-  
-  .health-pillars {
-    padding: 60px 20px;
-    background: #f0fdf4;
-    text-align: center;
+
+  .content-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
   
-  .health-pillars h2 {
+  .health-pillars {
+    padding: 20px 60px;
+    text-align: center;
+    flex: 1 1 45%;
+    background: #97cfc46f;
+    border-radius: 12px;
+    box-shadow: 0 8px 2px rgba(0,0,0,0.05);
+  }
+   .tips-section {
+    padding: 60px 20px;
+    text-align:justify;
+    flex: 1 1 45%;
+    background: #8cde096f;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  }
+  
+  .health-pillars  h2 {
     font-size: 2rem;
     margin-bottom: 40px;
     color: #2c3e50;
@@ -95,6 +114,24 @@
   }
   
   /* Responsive */
+  @media(min-width: 1200px) {
+    .health-pillars {
+      padding: 80px 40px;
+    }
+    .pillar:nth-child(even) {
+        direction: rtl; /* flips the grid order for even ones */
+      }
+    
+      .pillar:nth-child(even) .pillar-text,
+      .pillar:nth-child(even) .pillar-media {
+        direction: ltr; /* fixes flipped text inside */
+      }
+  
+    .pillar-container {
+      padding: 0 40px;
+    }
+  }
+
   @media(min-width: 768px) {
     .pillar {
       flex-direction: row;
@@ -113,7 +150,7 @@
   }
   /* Hero Section */
   .hero {
-    padding: 5rem 2rem;
+    padding: 2rem 1rem;
     background: linear-gradient(135deg, #10b981, #34d399);
     color: white;
     text-align: center;

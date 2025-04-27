@@ -1,0 +1,227 @@
+
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="src/css/App.css">
+  <link rel="stylesheet" href="src/css/faqs.css">
+  <title>Breachfix Health</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-gray-800 font-sans">
+
+
+  <!-- Navbar -->
+  <nav class="bg-green-600 text-white p-4 flex justify-between items-center shadow-md">
+         <!-- Logo and Brand -->
+  <div class="flex items-center gap-3">
+    <img src="src/images/6.svg" alt="BreachFix Logo" class="w-30 h-20 object-contain" />
+    
+  </div>
+    <ul class="flex gap-6">
+      <li><a href="index.html" class="hover:underline">Home</a></li>
+      <li><a href="explore.html" class="hover:underline">Courses</a></li>
+      <li><a href="event.html" class="hover:underline">Events</a></li>
+      <li><a href="src/auth/login.html" class="hover:underline">Login</a></li>
+    </ul>
+  </nav>
+
+
+<div class="faq-container">
+    <h2>Frequently Asked Questions</h2>
+  
+    <div class="faq">
+      <div class="question">
+        <h3>What is this course about?</h3>
+        <span class="toggle">+</span>
+      </div>
+      <div class="answer">
+        <p>This course is designed to teach you foundational principles of health and nutrition from a biblical and scientific perspective.</p>
+      </div>
+    </div>
+  
+    <div class="faq">
+      <div class="question">
+        <h3>Do I need any prior experience?</h3>
+        <span class="toggle">+</span>
+      </div>
+      <div class="answer">
+        <p>No prior experience is necessary! This course is beginner-friendly and structured in a simple, step-by-step way.</p>
+      </div>
+    </div>
+  
+    <div class="faq">
+      <div class="question">
+        <h3>Will I get a certificate?</h3>
+        <span class="toggle">+</span>
+      </div>
+      <div class="answer">
+        <p>Yes! Once you complete the course and quizzes, a digital certificate will be issued.</p>
+      </div>
+    </div>
+  </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-grid">
+          <div class="footer-section">
+            <h4>About Us</h4>
+            <p>HealthLift helps you learn, grow, and live better. Courses, events, and support — all in one place.</p>
+          </div>
+          <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="event.html">Events</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="explore.html">Courses</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="faqs.html">FAQs</a></li>
+              </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Follow Us</h4>
+            <div class="social-links">
+                <a href="https://x.com/NtihanirahoJack" title="X">
+                  <img class="icon-x" src="https://cdn.simpleicons.org/x/ffffff" alt="X" />
+                </a>
+                <a href="https://www.instagram.com/breachfix/" title="Instagram">
+                  <img class="icon-instagram" src="https://cdn.simpleicons.org/instagram/ffffff" alt="Instagram" />
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=61559916151082&sk=grid" title="Facebook">
+                  <img class="icon-facebook" src="https://cdn.simpleicons.org/facebook/ffffff" alt="Facebook" />
+                </a>
+                <a href="https://github.com/Breachfix" title="GitHub">
+                  <img class="icon-github" src="https://cdn.simpleicons.org/github/ffffff" alt="GitHub" />
+                </a>
+                <a href="https://www.youtube.com/@Breachfixhealth" title="YouTube">
+                  <img class="icon-youtube" src="https://cdn.simpleicons.org/youtube/ffffff" alt="YouTube" />
+                </a>
+                <a href="https://www.tiktok.com/@breachfixhealth" title="TikTok">
+                  <img class="icon-tiktok" src="https://cdn.simpleicons.org/tiktok/ffffff" alt="TikTok" />
+                </a>
+              </div>
+          </div>
+          <div class="footer-section">
+            <h4>Subscribe</h4>
+            <form>
+              <input type="email" placeholder="Your email" />
+              <button type="submit">Subscribe</button>
+            </form>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 BreachFix HEALTH. All rights reserved.</p>
+          <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        </div>
+      </footer>
+     
+      <!-- Scripts -->
+      <script src="src/js/main.js"></script>
+      <script src="src/js/chatbot.js"></script>
+      <script src="src/js/faqs.js"></script>
+      <script>
+        const icons = {
+          x: {
+            default: 'https://cdn.simpleicons.org/x/ffffff',
+            color: 'https://cdn.simpleicons.org/x/000000'
+          },
+          instagram: {
+            default: 'https://cdn.simpleicons.org/instagram/ffffff',
+            color: 'https://cdn.simpleicons.org/instagram/E4405F'
+          },
+          facebook: {
+            default: 'https://cdn.simpleicons.org/facebook/ffffff',
+            color: 'https://cdn.simpleicons.org/facebook/1877F2'
+          },
+          github: {
+            default: 'https://cdn.simpleicons.org/github/ffffff',
+            color: 'https://cdn.simpleicons.org/github/181717'
+          },
+          youtube: {
+            default: 'https://cdn.simpleicons.org/youtube/ffffff',
+            color: 'https://cdn.simpleicons.org/youtube/FF0000'
+          },
+          tiktok: {
+            default: 'https://cdn.simpleicons.org/tiktok/ffffff',
+            color: 'https://cdn.simpleicons.org/tiktok/000000'
+          }
+        };
+      
+        document.querySelectorAll('.social-links img').forEach(img => {
+          const platform = img.className.replace('icon-', '');
+      
+          if (icons[platform]) {
+            img.addEventListener('mouseenter', () => {
+              img.src = icons[platform].color;
+            });
+            img.addEventListener('mouseleave', () => {
+              img.src = icons[platform].default;
+            });
+          }
+        });
+      </script>
+      <script>
+        const testimonies = [
+          document.getElementById('testimony1'),
+          document.getElementById('testimony2'),
+          document.getElementById('testimony3')
+        ];
+        
+        let current = 0;
+      
+        setInterval(() => {
+          testimonies[current].classList.add('hidden');
+          current = (current + 1) % testimonies.length;
+          testimonies[current].classList.remove('hidden');
+        }, 15000); // 15 seconds
+      </script>
+        <script>
+            const slides = document.querySelectorAll('.testimonial-slide');
+            let currentIndex = 0;
+        
+            function showNextSlide() {
+              slides[currentIndex].classList.add('hidden');
+              currentIndex = (currentIndex + 1) % slides.length;
+              slides[currentIndex].classList.remove('hidden');
+            }
+        
+            setInterval(showNextSlide, 7000); // Change every 7 seconds
+          </script>
+          <script>
+            const tips = [
+              "Drink at least 8 glasses of water today to stay hydrated.",
+              "Take a brisk 10-minute walk during your break to boost circulation.",
+              "Replace sugary snacks with a piece of fruit for better energy.",
+              "Practice deep breathing for 5 minutes to reduce stress.",
+              "Avoid screens at least 30 minutes before bedtime for better sleep.",
+              "Add leafy greens like spinach to your lunch for extra nutrients.",
+              "Take time to stretch after sitting for long hours.",
+              "Get some sunlight exposure in the morning to help regulate sleep.",
+              "Plan your meals to avoid last-minute unhealthy choices.",
+              "Get 7–9 hours of sleep to help your body recharge."
+            ];
+          
+            function showDate() {
+              const dateElement = document.getElementById('today-date');
+              const today = new Date();
+              const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+              dateElement.textContent = today.toLocaleDateString(undefined, options);
+            }
+          
+            function showRandomTip() {
+              const tipElement = document.getElementById('health-tip');
+              const randomIndex = Math.floor(Math.random() * tips.length);
+              tipElement.textContent = tips[randomIndex];
+            }
+          
+            window.onload = function () {
+              showDate();
+              showRandomTip();
+            };
+          </script>
+    
+    </body>
+    
+    </html>

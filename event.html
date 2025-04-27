@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="src/css/App.css">
+  <link rel="stylesheet" href="src/css/event.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Event Tracker</title>
+</head>
+<body class="bg-white text-gray-800 font-sans">
+
+
+    <!-- Navbar -->
+    <nav class="bg-green-600 text-white p-4 flex justify-between items-center shadow-md">
+           <!-- Logo and Brand -->
+    <div class="flex items-center gap-3">
+      <img src="src/images/6.svg" alt="BreachFix Logo" class="w-30 h-20 object-contain" />
+      
+    </div>
+      <ul class="flex gap-6">
+        <li><a href="index.html" class="hover:underline">Home</a></li>
+        <li><a href="explore.html" class="hover:underline">Courses</a></li>
+        <li><a href="event.html" class="hover:underline">Events</a></li>
+        <li><a href="src/auth/login.html" class="hover:underline">Login</a></li>
+      </ul>
+    </nav>
+  
+  <!-- Hero Section -->
+  <section class="hero">
+      <h2>Upcoming Events</h2>
+      <p>Join our events and courses to learn how to live a healthier, purpose-driven life.</p>
+      <a href="explore.html" class="inline-block mt-6 bg-white text-green-700 font-semibold px-6 py-2 rounded shadow hover:bg-gray-100 transition">
+        Explore Courses
+      </a>
+    </section>
+
+    <section class="eventshome">
+      <div id="event-list"></div>
+    
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-grid">
+          <div class="footer-section">
+            <h4>About Us</h4>
+            <p>HealthLift helps you learn, grow, and live better. Courses, events, and support — all in one place.</p>
+          </div>
+          <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="event.html">Events</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="explore.html">Courses</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="faqs.html">FAQs</a></li>
+              </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Follow Us</h4>
+            <div class="social-links">
+                <a href="https://x.com/NtihanirahoJack" title="X">
+                  <img class="icon-x" src="https://cdn.simpleicons.org/x/ffffff" alt="X" />
+                </a>
+                <a href="https://www.instagram.com/breachfix/" title="Instagram">
+                  <img class="icon-instagram" src="https://cdn.simpleicons.org/instagram/ffffff" alt="Instagram" />
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=61559916151082&sk=grid" title="Facebook">
+                  <img class="icon-facebook" src="https://cdn.simpleicons.org/facebook/ffffff" alt="Facebook" />
+                </a>
+                <a href="https://github.com/Breachfix" title="GitHub">
+                  <img class="icon-github" src="https://cdn.simpleicons.org/github/ffffff" alt="GitHub" />
+                </a>
+                <a href="https://www.youtube.com/@Breachfixhealth" title="YouTube">
+                  <img class="icon-youtube" src="https://cdn.simpleicons.org/youtube/ffffff" alt="YouTube" />
+                </a>
+                <a href="https://www.tiktok.com/@breachfixhealth" title="TikTok">
+                  <img class="icon-tiktok" src="https://cdn.simpleicons.org/tiktok/ffffff" alt="TikTok" />
+                </a>
+              </div>
+          </div>
+          <div class="footer-section">
+            <h4>Subscribe</h4>
+            <form>
+              <input type="email" placeholder="Your email" />
+              <button type="submit">Subscribe</button>
+            </form>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 BreachFix HEALTH. All rights reserved.</p>
+          <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        </div>
+      </footer>
+     
+        <script>
+            const icons = {
+              x: {
+                default: 'https://cdn.simpleicons.org/x/ffffff',
+                color: 'https://cdn.simpleicons.org/x/000000'
+              },
+              instagram: {
+                default: 'https://cdn.simpleicons.org/instagram/ffffff',
+                color: 'https://cdn.simpleicons.org/instagram/E4405F'
+              },
+              facebook: {
+                default: 'https://cdn.simpleicons.org/facebook/ffffff',
+                color: 'https://cdn.simpleicons.org/facebook/1877F2'
+              },
+              github: {
+                default: 'https://cdn.simpleicons.org/github/ffffff',
+                color: 'https://cdn.simpleicons.org/github/181717'
+              },
+              youtube: {
+                default: 'https://cdn.simpleicons.org/youtube/ffffff',
+                color: 'https://cdn.simpleicons.org/youtube/FF0000'
+              },
+              tiktok: {
+                default: 'https://cdn.simpleicons.org/tiktok/ffffff',
+                color: 'https://cdn.simpleicons.org/tiktok/000000'
+              }
+            };
+          
+            document.querySelectorAll('.social-links img').forEach(img => {
+              const platform = img.className.replace('icon-', '');
+          
+              if (icons[platform]) {
+                img.addEventListener('mouseenter', () => {
+                  img.src = icons[platform].color;
+                });
+                img.addEventListener('mouseleave', () => {
+                  img.src = icons[platform].default;
+                });
+              }
+            });
+          </script>
+     <script>
+//         const events = [
+//           {
+//             title: "Nutrition Workshop",
+//             date: "2025-05-01T18:00:00",
+//             location: "Online",
+//             link: "https://example.com/join-nutrition",
+//             type: "online",
+//             course: "nutrition",
+//             video: "https://www.youtube.com/embed/your_video_id"
+//           },
+//           {
+//             title: "Rest and Recovery Conference",
+//             date: "2025-05-10T10:00:00",
+//             location: "Health Center Auditorium",
+//             link: "course-details.html?course=rest",
+//             type: "in-person",
+//             course: "rest",
+//             image: "src/images/1.JPG"
+//           },
+//           {
+//             title: "Victory Over Addictions - Live Q&A",
+//             date: "2025-05-05T20:00:00",
+//             location: "Online",
+//             link: "login.html",
+//             type: "login-required",
+//             course: null
+//           },
+//           {
+//             title: "Mental Health Mastery",
+//             date: "2025-05-15T14:00:00",
+//             location: "Online",
+//             link: "payment.html",
+//             type: "paid",
+//             course: "mental-health"
+//           }
+//         ];
+      
+//         const countdownElements = [];
+//         const eventList = document.getElementById("event-list");
+      
+//         function pad(n) {
+//           return n.toString().padStart(2, '0');
+//         }
+      
+//         function updateFlipCard(id, value) {
+//           const el = document.getElementById(id);
+//           const numEl = el.querySelector(".flip-num");
+//           if (numEl.textContent !== value) {
+//             numEl.classList.remove("flip-animate");
+//             void numEl.offsetWidth;
+//             numEl.textContent = value;
+//             numEl.classList.add("flip-animate");
+//           }
+//         }
+      
+//         const createFlipClock = (idPrefix) => {
+//           const container = document.createElement("div");
+//           container.className = "flip-clock";
+//           ["days", "hours", "minutes", "seconds"].forEach((unit) => {
+//             const box = document.createElement("div");
+//             box.className = "flip-box";
+//             box.innerHTML = `
+//               <div class="flip-unit-title">${unit.charAt(0).toUpperCase() + unit.slice(1)}</div>
+//               <div class="flip-card" id="${idPrefix}-${unit}">
+//                 <div class="flip-num">00</div>
+//               </div>
+//             `;
+//             container.appendChild(box);
+//           });
+//           return container;
+//         };
+      
+//         events.forEach((event, index) => {
+//     const div = document.createElement("div");
+//     div.className = "event";
+//     div.style.border = "1px solid #ccc";
+//     div.style.borderRadius = "10px";
+//     div.style.margin = "20px 20px";
+//     div.style.padding = "20px";
+//     div.style.backgroundColor = "#f9f9f9";
+    
+//     // Centered Title
+//     const title = document.createElement("h3");
+//     title.textContent = event.title;
+//     title.style.textAlign = "center";
+//     title.style.fontSize = "1.8rem";
+//     title.style.marginBottom = "20px";
+//     div.appendChild(title);
+    
+//    // Grid layout for separation
+// eventWrapper.className = "event-wrapper";
+// eventWrapper.style.display = "grid";
+// eventWrapper.style.gridTemplateColumns = "1fr 2fr";
+// eventWrapper.style.gap = "20px";
+// eventWrapper.style.alignItems = "start";
+
+// // Media Container
+// mediaContainer.style.width = "100%";
+// mediaContainer.style.alignSelf = "start"; // prevent stretch
+
+// // Append media to wrapper
+// eventWrapper.appendChild(mediaContainer);
+
+// // Right column: info + countdown stacked vertically
+// const rightColumn = document.createElement("div");
+// rightColumn.style.display = "flex";
+// rightColumn.style.flexDirection = "column";
+// rightColumn.style.gap = "15px";
+// rightColumn.style.justifyContent = "start";
+
+// // Append info to right column
+// rightColumn.appendChild(infoContainer);
+
+
+
+// // Append right column to wrapper
+// eventWrapper.appendChild(rightColumn);
+
+// // Add everything to main div
+// div.appendChild(eventWrapper);
+// eventList.appendChild(div);
+    
+//     if (event.video) {
+//     const videoIframe = document.createElement("iframe");
+//     videoIframe.src = event.video;
+//     videoIframe.width = "100%";
+//     videoIframe.height = "250";
+//     videoIframe.style.borderRadius = "10px";
+//     videoIframe.frameBorder = "0";
+//     videoIframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+//     videoIframe.setAttribute("allowfullscreen", "");
+//     mediaContainer.appendChild(videoIframe);
+//     } else if (event.image) {
+//     const img = document.createElement("img");
+//     img.src = event.image;
+//     img.alt = event.title + " image";
+//     img.style.width = "100%";
+//     img.style.maxHeight = "250px";
+//     img.style.objectFit = "cover";
+//     img.style.borderRadius = "10px";
+//     mediaContainer.appendChild(img);
+//     }
+    
+//     // Event info on the right
+//     const infoContainer = document.createElement("div");
+//     infoContainer.style.flex = "2";
+//     infoContainer.style.minWidth = "280px";
+    
+//     const date = document.createElement("p");
+//     date.className = "info";
+//     date.innerHTML = `<strong>Date:</strong> ${new Date(event.date).toLocaleString()}`;
+//     infoContainer.appendChild(date);
+    
+//     const location = document.createElement("p");
+//     location.className = "info";
+//     location.innerHTML = `<strong>Location:</strong> ${event.location}`;
+//     infoContainer.appendChild(location);
+    
+//     const button = document.createElement("a");
+//     button.className = "button";
+//     button.href = event.link;
+//     button.target = "_blank";
+//     button.style.display = "inline-block";
+//     button.style.marginTop = "10px";
+//     button.style.padding = "10px 20px";
+//     button.style.backgroundColor = "#007bff";
+//     button.style.color = "#fff";
+//     button.style.textDecoration = "none";
+//     button.style.borderRadius = "5px";
+//     button.textContent =
+//     event.type === "paid" ? "Pay & Join" :
+//     event.type === "login-required" ? "Login to Join" :
+//     event.type === "online" ? "Join Online" :
+//     event.course ? "View Course" : "More Info";
+//     infoContainer.appendChild(button);
+    
+//     eventWrapper.appendChild(contentContainer);
+//     eventWrapper.appendChild(infoContainer);
+
+
+//     eventWrapper.appendChild(mediaContainer);
+    
+//     div.appendChild(eventWrapper);
+    
+//     // Countdown below
+//     const countdownContainer = createFlipClock(`event${index}`);
+//     countdownContainer.style.marginTop = "20px";
+//     div.appendChild(countdownContainer);
+    
+//     countdownElements.push({ idPrefix: `event${index}`, date: event.date });
+    
+//     eventList.appendChild(div);
+//     });
+//         setInterval(() => {
+//           countdownElements.forEach(({ idPrefix, date }) => {
+//             const now = new Date();
+//             const target = new Date(date);
+//             const diff = target - now;
+//             if (diff <= 0) return;
+      
+//             const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+//             const h = Math.floor((diff / (1000 * 60 * 60)) % 24);
+//             const m = Math.floor((diff / (1000 * 60)) % 60);
+//             const s = Math.floor((diff / 1000) % 60);
+      
+//             updateFlipCard(`${idPrefix}-days`, pad(d));
+//             updateFlipCard(`${idPrefix}-hours`, pad(h));
+//             updateFlipCard(`${idPrefix}-minutes`, pad(m));
+//             updateFlipCard(`${idPrefix}-seconds`, pad(s));
+//           });
+//         }, 1000);
+
+        
+      </script>
+      <script>
+        const events = [
+          {
+            title: "Nutrition Workshop",
+            date: "2025-05-01T18:00:00",
+            location: "Online",
+            link: "https://example.com/join-nutrition",
+            type: "online",
+            course: "nutrition",
+            details: "Join us for a comprehensive session on the 8 laws of health. We'll explore practical meal planning tips, natural remedies, and how lifestyle choices impact long-term well-being. The session includes a live Q&A with a certified nutritionist, so come ready with your questions!",
+            video: "https://www.youtube.com/embed/4K2TveRO4QI"
+          },
+          {
+            title: "Rest and Recovery Conference",
+            date: "2025-05-10T10:00:00",
+            location: "Health Center Auditorium",
+            link: "course-details.html?course=rest",
+            type: "in-person",
+            course: "rest",
+            details: "Discover the science and spirituality behind rest. This in-person conference explores how physical rest, mental calm, and spiritual reflection can renew your energy and deepen your connection with God. You'll hear from wellness experts, pastors, and experience guided rest practices.",
+            image: "src/images/explore/rest 1.svg"
+          },
+          {
+            title: "Victory Over Addictions - Live Q&A",
+            date: "2025-05-05T20:00:00",
+            location: "Online",
+            link: "login.html",
+            type: "login-required",
+            course: null,
+            details: "This live Q&A will focus on overcoming addictions from a spiritual and psychological perspective. Get practical advice, encouragement, and biblical counsel from those who’ve walked the path to freedom. Registration and login required for access.",
+            image: "src/images/explore/victory 1.svg"
+          },
+          {
+            title: "Mental Health Mastery",
+            date: "2025-05-15T14:00:00",
+            location: "Online",
+            link: "payment.html",
+            type: "paid",
+            course: "mental-health",
+            details: "In this powerful session, we'll explore God’s plan for mental wellness and emotional resilience. Learn proven techniques to manage stress, reframe negative thinking, and cultivate peace in your daily life. Access to this course requires a one-time payment.",
+            image: "src/images/explore/Mental 2.svg"
+          }
+        ];
+      
+        const countdownElements = [];
+        const eventList = document.getElementById("event-list");
+      
+        function pad(n) {
+          return n.toString().padStart(2, '0');
+        }
+      
+        function updateFlipCard(id, value) {
+          const el = document.getElementById(id);
+          const numEl = el.querySelector(".flip-num");
+          if (numEl.textContent !== value) {
+            numEl.classList.remove("flip-animate");
+            void numEl.offsetWidth;
+            numEl.textContent = value;
+            numEl.classList.add("flip-animate");
+          }
+        }
+      
+        const createFlipClock = (idPrefix) => {
+          const container = document.createElement("div");
+          container.className = "flip-clock";
+          ["days", "hours", "minutes", "seconds"].forEach((unit) => {
+            const box = document.createElement("div");
+            box.className = "flip-box";
+            box.innerHTML = `
+              <div class="flip-unit-title">${unit.charAt(0).toUpperCase() + unit.slice(1)}</div>
+              <div class="flip-card" id="${idPrefix}-${unit}">
+                <div class="flip-num">00</div>
+              </div>
+            `;
+            container.appendChild(box);
+          });
+          return container;
+        };
+      
+        events.forEach((event, index) => {
+          const div = document.createElement("div");
+          div.className = "event";
+          div.style.border = "1px solid #ccc";
+          div.style.borderRadius = "10px";
+          div.style.margin = "20px 20px";
+          div.style.padding = "20px";
+          div.style.backgroundColor = "#97cfc46f";
+      
+          // Title
+          const title = document.createElement("h3");
+          title.textContent = event.title;
+          title.style.textAlign = "center";
+          title.style.fontSize = "1.8rem";
+          title.style.marginBottom = "20px";
+          div.appendChild(title);
+      
+          // Layout
+          const eventWrapper = document.createElement("div");
+          eventWrapper.className = "event-wrapper";
+          eventWrapper.style.display = "grid";
+          eventWrapper.style.gridTemplateColumns = "1fr 2fr";
+          eventWrapper.style.gap = "20px";
+          eventWrapper.style.alignItems = "start";
+          eventWrapper.style.background = "#97cfc46f";
+          eventWrapper.style.padding = "1rem";
+          eventWrapper.style.borderRadius = "12px";
+      
+          // Media container
+          const mediaContainer = document.createElement("div");
+          mediaContainer.style.width = "100%";
+          mediaContainer.style.alignSelf = "start";
+      
+          if (event.video) {
+            const videoIframe = document.createElement("iframe");
+            videoIframe.src = event.video;
+            videoIframe.width = "100%";
+            videoIframe.height = "250";
+            videoIframe.style.objectFit ="cover";
+            videoIframe.style.borderRadius = "10px";
+            videoIframe.frameBorder = "0";
+            videoIframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+            videoIframe.setAttribute("allowfullscreen", "");
+            mediaContainer.appendChild(videoIframe);
+          } else if (event.image) {
+            const img = document.createElement("img");
+            img.src = event.image;
+            img.alt = event.title + " image";
+            img.style.width = "100%";
+            img.style.maxHeight = "250px";
+            img.style.objectFit = "cover";
+            img.style.borderRadius = "10px";
+            mediaContainer.appendChild(img);
+          }
+      
+          eventWrapper.appendChild(mediaContainer);
+      
+          // Info container
+          const infoContainer = document.createElement("div");
+          
+          infoContainer.style.flex = "2";
+          infoContainer.style.minWidth = "280px";
+          infoContainer.style.display = "flex";
+          infoContainer.style.flexDirection = "column";
+          infoContainer.style.gap = "10px";
+      
+          const date = document.createElement("p");
+          date.className = "info";
+          date.innerHTML = `<strong>Date:</strong> ${new Date(event.date).toLocaleString()}`;
+          infoContainer.appendChild(date);
+      
+          const location = document.createElement("p");
+          location.className = "info";
+          location.innerHTML = `<strong>Location:</strong> ${event.location}`;
+          infoContainer.appendChild(location);
+
+          const details = document.createElement("p");
+          details.className = "info";
+          details.innerHTML = `<strong>Details:</strong> ${event.details}`;
+          infoContainer.appendChild(details);
+      
+          const button = document.createElement("a");
+          button.className = "button";
+          button.href = event.link;
+          button.target = "_blank";
+          button.style.display = "inline-block";
+          button.style.marginTop = "10px";
+          button.style.padding = "10px 20px";
+          button.addEventListener("mouseover", () => {
+          button.style.backgroundColor = "green";
+        });
+          button.addEventListener("mouseout", () => {
+          button.style.backgroundColor = "#b4ef2a";
+        });
+          button.style.color = "#000";
+          button.style.textDecoration = "none";
+          button.style.borderRadius = "5px";
+          button.textContent =
+            event.type === "paid" ? "Pay & Join" :
+            event.type === "login-required" ? "Login to Join" :
+            event.type === "online" ? "Join Online" :
+            event.course ? "View Course" : "More Info";
+      
+          infoContainer.appendChild(button);
+          eventWrapper.appendChild(infoContainer);
+      
+          div.appendChild(eventWrapper);
+      
+          // Countdown
+          const countdownContainer = createFlipClock(`event${index}`);
+          countdownContainer.style.marginTop = "20px";
+          div.appendChild(countdownContainer);
+      
+          countdownElements.push({ idPrefix: `event${index}`, date: event.date });
+          eventList.appendChild(div);
+        });
+      
+        setInterval(() => {
+          countdownElements.forEach(({ idPrefix, date }) => {
+            const now = new Date();
+            const target = new Date(date);
+            const diff = target - now;
+            if (diff <= 0) return;
+      
+            const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const h = Math.floor((diff / (1000 * 60 * 60)) % 24);
+            const m = Math.floor((diff / (1000 * 60)) % 60);
+            const s = Math.floor((diff / 1000) % 60);
+      
+            updateFlipCard(`${idPrefix}-days`, pad(d));
+            updateFlipCard(`${idPrefix}-hours`, pad(h));
+            updateFlipCard(`${idPrefix}-minutes`, pad(m));
+            updateFlipCard(`${idPrefix}-seconds`, pad(s));
+          });
+        }, 1000);
+      </script>
+
+
+</body>
+
+</html>
