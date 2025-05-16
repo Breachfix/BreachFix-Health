@@ -19,7 +19,6 @@ export default function FooterComponent() {
               <li><Link to="/">Home</Link></li>
               <li><Link to="/explore">Courses</Link></li>
               <li><Link to="/shop">Shop</Link></li>
-              <li><Link to="/faqs">FAQs</Link></li>
               <li><Link to="/tips">Tips</Link></li>
             </ul>
           </div>

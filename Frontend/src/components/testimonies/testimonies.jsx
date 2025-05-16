@@ -4,25 +4,25 @@ import './testimonies.css';
 const testimonials = [
   {
     name: 'Val',
-    image: '/src/assets/1.JPG',
+    image: '/assets/1.JPG',
     quote:
       'Before the program, I rarely moved due to my office work and being at home most of the time. But I learned how essential walking is for my health, and now I go up and down the stairs daily—it’s made a big difference. I feel stronger, more in control, and I’m committed to keeping it up.',
   },
   {
     name: 'John',
-    image: '/src/assets/3.JPG',
+    image: '/assets/3.JPG',
     quote:
       'Before the program, I struggled to manage my blood sugar levels. But after going through Diabetes Undone, everything started to change. The principles taught were simple yet powerful. I feel more in control of my health, and I believe my wellbeing will only keep improving.',
   },
   {
     name: 'Precious',
-    image: '/src/assets/5.JPG',
+    image: '/assets/5.JPG',
     quote:
       'I joined simply to feel better—but I found something more. It was educational, inspiring, and healing. I plan to use what I’ve learned to help many of my friends and colleagues back in Nigeria.',
   },
   {
     name: 'Carol',
-    image: '/src/assets/6.JPG',
+    image: '/assets/6.JPG',
     quote:
       'The program was incredibly helpful to me, and I’ve used it to encourage many of my friends to take better care of their health.',
   },

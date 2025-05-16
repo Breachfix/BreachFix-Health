@@ -59,7 +59,7 @@ export default function Shop() {
   {[1, 2, 3, 4, 5, 6, 10, 8, 9, 11].map((id) => (
     <div className="product-card" key={id}>
       <img
-        src={`/src/assets/explore/Nutrition ${id}.svg`}
+        src={`/assets/explore/Nutrition ${id}.svg`}
         alt={`Product ${id}`}
       />
       <h3>Product {id}</h3>

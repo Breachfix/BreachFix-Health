@@ -1,11 +1,12 @@
 import React from 'react';
 import NavbarComponent from '../../components/nav/nav';
 import FooterComponent from '../../components/footer/footer';
-import './legal.css';
+import './legal.css'
 
 export default function PrivacyPolicy() {
   return (
     <div className="legal-wrapper">
+       <div className="container">
       <NavbarComponent />
 
       <section className="hero">
@@ -13,7 +14,7 @@ export default function PrivacyPolicy() {
         <p>Your privacy matters. Here's how we handle your personal information at Breachfix Health.</p>
       </section>
 
-      <div className="legal-content">
+      <section className="policy-section">
         <h3>1. Introduction</h3>
         <p>
           Breachfix Health ("we", "our", or "us") is committed to protecting your privacy. This Privacy Policy
@@ -91,9 +92,13 @@ export default function PrivacyPolicy() {
         </p>
 
         <p className="last-updated"><em>Last Updated: May 16, 2025</em></p>
-      </div>
+       </section>
 
-      <FooterComponent />
-    </div>
+     
+      </div>
+      
+   
+     <FooterComponent />
+      </div>
   );
 }

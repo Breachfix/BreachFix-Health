@@ -24,31 +24,31 @@ export default function Explore() {
             {
               title: "Nutrition for Life",
               desc: "Understand how plant-based nutrition supports vitality and reverses chronic disease.",
-              img: "/src/assets/explore/Nutrition 1.svg",
+              img: "/assets/explore/Nutrition 1.svg",
               link: "/nutrition"
             },
             {
               title: "God's Movement Plan",
               desc: "Daily movement and its spiritual impact on health and character development.",
-              img: "/src/assets/explore/Sabbath  1.svg",
+              img: "/assets/explore/Sabbath  1.svg",
               link: "/course-details?course=exercise"
             },
             {
               title: "Rest and Recovery",
               desc: "The importance of Sabbath rest and sleep on emotional and physical healing.",
-              img: "/src/assets/explore/rest 1.svg",
+              img: "/assets/explore/rest 1.svg",
               link: "/course-details?course=rest"
             },
             {
               title: "Mastering Self-Control",
               desc: "This course is locked. Subscribe to gain access to this advanced course on habits, porn, and lifestyle addictions.",
-              img: "/src/assets/explore/victory 1.svg",
+              img: "/assets/explore/victory 1.svg",
               locked: true
             },
             {
               title: "Emotional and Mental Balance",
               desc: "This course is locked. Discover the biblical path to emotional wellness and mental peace.",
-              img: "/src/assets/explore/Mental 1.svg",
+              img: "/assets/explore/Mental 1.svg",
               locked: true
             }
           ].map((course, idx) => (

@@ -24,7 +24,7 @@ const EVENTS = [
     course: "rest",
     details:
       "Discover the science and spirituality behind rest. This in-person conference explores physical rest, mental calm, and spiritual reflection.",
-    image: "src/assets/explore/rest 1.svg"
+    image: "/assets/explore/rest 1.svg"
   },
   {
     title: "Victory Over Addictions - Live Q&A",
@@ -35,7 +35,7 @@ const EVENTS = [
     course: null,
     details:
       "This live Q&A will focus on overcoming addictions from a spiritual and psychological perspective. Registration and login required.",
-    image: "src/assets/explore/victory 1.svg"
+    image: "/assets/explore/victory 1.svg"
   },
   {
     title: "Mental Health Mastery",
@@ -46,7 +46,7 @@ const EVENTS = [
     course: "mental-health",
     details:
       "Explore God’s plan for mental wellness and emotional resilience. Learn to manage stress and cultivate peace in daily life.",
-    image: "src/assets/explore/Mental 2.svg"
+    image: "/assets/explore/Mental 2.svg"
   }
 ];
 
