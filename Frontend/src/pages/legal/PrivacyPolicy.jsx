@@ -1,7 +1,7 @@
 import React from 'react';
 import NavbarComponent from '../../components/nav/nav';
 import FooterComponent from '../../components/footer/footer';
-import './Legal.css';
+import './legal.css';
 
 export default function PrivacyPolicy() {
   return (

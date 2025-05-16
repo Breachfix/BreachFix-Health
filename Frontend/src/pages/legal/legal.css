@@ -1,0 +1,91 @@
+/* ===== LEGAL PAGE STYLES ===== */
+.legal-wrapper {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f9fafb;
+  color: #333;
+  padding: 3rem 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+/* Page Title */
+.legal-wrapper h1 {
+  font-size: 2.5rem;
+  color: #059669;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Section Titles */
+.legal-wrapper h2 {
+  font-size: 1.75rem;
+  margin-top: 2rem;
+  color: #047857;
+}
+
+/* Subsection Titles */
+.legal-wrapper h3 {
+  font-size: 1.3rem;
+  margin-top: 1.5rem;
+  color: #065f46;
+}
+
+/* Paragraphs */
+.legal-wrapper p {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 1.25rem;
+}
+
+/* Lists */
+.legal-wrapper ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.legal-wrapper ol {
+  list-style: decimal;
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.legal-wrapper li {
+  margin-bottom: 0.75rem;
+}
+
+/* Links */
+.legal-wrapper a {
+  color: #059669;
+  text-decoration: underline;
+}
+
+.legal-wrapper a:hover {
+  color: #047857;
+}
+
+/* Highlighted Terms */
+.legal-wrapper strong {
+  color: #111827;
+  font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .legal-wrapper {
+    padding: 2rem 1rem;
+  }
+
+  .legal-wrapper h1 {
+    font-size: 2rem;
+  }
+
+  .legal-wrapper h2 {
+    font-size: 1.5rem;
+  }
+
+  .legal-wrapper h3 {
+    font-size: 1.2rem;
+  }
+}
