@@ -14,7 +14,7 @@ import UserProfile from './components/user-profile/userProfile.jsx';
 import Shop from './pages/shop/Shop.jsx';
 import PrivacyPolicy from './pages/legal/PrivacyPolicy.jsx';
 import TermsAndConditions from './pages/legal/TermsAndConditions.jsx';
-import './styles/app.css'
+
 function App() {
   return (
     <BrowserRouter>
