@@ -35,7 +35,7 @@ export default function NavbarComponent() {
   return (
     <nav className="navbar">
       <div className="logo-container">
-        <img src="/src/assets/6.svg" alt="BreachFix Logo" className="logo" />
+        <img src="/assets/6.svg" alt="BreachFix Logo" className="logo" />
       </div>
       <ul className="nav-links">
         <li><Link to="/">Home</Link></li>
