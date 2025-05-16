@@ -1,0 +1,206 @@
+.home-wrapper {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f0f9f5;
+  color: #333;
+  min-height: 100vh;
+}
+
+
+/* Hero Section */
+.hero {
+  padding: 2rem;
+  text-align: center;
+  background: linear-gradient(135deg, #10b981, #34d399);
+  color: white;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto 2rem auto;
+}
+
+
+
+.explore-button {
+  margin-top: 1.5rem;
+  background-color: white;
+  color: #059669;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.375rem;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.explore-button:hover {
+  background-color: #f3f4f6;
+}
+
+/* Popup */
+.popup {
+  position: fixed;
+  top: 4.5rem; /* instead of top: 1rem */
+  right: 2rem;
+  background: white;
+  border: 1px solid #059669;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  color: #059669;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+}
+
+/* Pillars */
+.health-pillars {
+  padding: 4rem 2rem;
+}
+
+.content-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+}
+
+
+/* Tips Section */
+.tips-section {
+  flex: 1 1 40%;
+  align-content:space-between;
+  background-color: #8cde096f;
+  padding: 3rem;
+  gap: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+
+  padding-bottom: 20px;
+}
+
+.tip-box {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-top: 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.tip-text {
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+button {
+  margin-top: 1rem;
+  background-color: #3aafa9;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #2b7a78;
+}
+
+/* Chat */
+.chat-icon {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  width: 3rem;
+  height: 3rem;
+  background-color: #059669;
+  color: white;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.chat-box {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  width: 20rem;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  z-index: 100;
+}
+
+.chat-messages {
+  height: 12rem;
+  overflow-y: auto;
+  margin-bottom: 0.5rem;
+  background-color: #f3f4f6;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.chat-input {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+}
+
+.chat-send {
+  width: 100%;
+  padding: 0.5rem;
+  background-color: #10b981;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.chat-send:hover {
+  background-color: #059669;
+}
+
+/* Responsive Enhancements */
+@media (max-width: 768px) {
+
+  .pillar {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .pillar-text {
+    padding: 0;
+  }
+
+  .hero h2 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+  .popup {
+  top: 4.5rem; /* instead of top: 1rem */
+  right: 1rem;
+  background: white;
+  border: 1px solid #059669;
+  padding: 1rem;
+  margin-left: 6rem;
+  border-radius: 0.5rem;
+  color: #059669;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+}
+
+}

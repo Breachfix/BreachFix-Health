@@ -1,0 +1,199 @@
+/* Events Page Styling */
+
+.events-wrapper {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f0f9f5;
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero {
+  padding: 3rem 2rem;
+  background: linear-gradient(135deg, #10b981, #34d399);
+  color: white;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.event-list {
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.event {
+  background-color: #aae1d0;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.event h3 {
+  font-size: 1.6rem;
+  color: #064e3b;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.event-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .event-content {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+.event-media {
+  flex: 1;
+}
+
+.event iframe,
+.event img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.event-details {
+  flex: 1;
+  background-color: #d1fae5;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.event .info {
+  font-size: 1rem;
+}
+
+.event .button {
+  display: inline-block;
+  margin-top: 15.4rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #059669;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.event .button:hover {
+  background-color: #c5f404;
+  color: #000;
+}
+
+/* Flip Clock (Green Theme) */
+.flip-clock {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+  background-color: #dcfce7;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.flip-box {
+  background-color: #064e3b;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  width: 80px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+  color: white;
+  font-family: monospace;
+}
+
+.flip-unit-title {
+  font-size: 0.85rem;
+  color: #d1fae5;
+  margin-bottom: 0.4rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.flip-card .flip-num {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: white;
+}
+
+@keyframes flipUp {
+  0% { transform: rotateX(0deg); }
+  100% { transform: rotateX(15deg); }
+}
+
+@media (max-width: 768px) {
+  .hero h2 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .event iframe {
+    aspect-ratio: 16 / 9;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    border-radius: 10px;
+  }
+
+  .flip-box {
+    width: 60px;
+    padding: 0.75rem;
+  }
+
+
+  .event-content {
+    flex-direction: column;
+  }
+   .flip-clock {
+    justify-content: space-around;
+    gap: 0.5rem;
+  }
+
+  .flip-box {
+    width: 70px;
+    padding: 0.75rem;
+    flex: 1 1 45%;
+    max-width: 45%;
+  }
+
+  .flip-card .flip-num {
+    font-size: 1.2rem;
+  }
+  .event .button {
+  margin-top: 1rem;
+}
+}

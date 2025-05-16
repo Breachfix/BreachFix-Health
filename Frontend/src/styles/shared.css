@@ -1,0 +1,77 @@
+/* ===================== */
+/* SHARED PILLAR STYLES */
+/* ===================== */
+
+.health-pillars {
+  padding: 4rem 2rem;
+}
+
+.pillar-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  flex: 1 1 55%;
+}
+
+.pillar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.pillar-media,
+.pillar-text {
+  flex: 1;
+  max-width: 50%;
+}
+
+.pillar-media iframe,
+.pillar-media img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.pillar-text {
+  padding: 1rem;
+  word-wrap: break-word;
+  white-space: normal;
+  text-align: left;
+}
+
+.pillar h3 {
+  font-size: 1.5rem;
+  color: #16a085;
+  margin-bottom: 0.5rem;
+}
+
+.pillar p {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+/* ================ */
+/* RESPONSIVE FIXES */
+/* ================ */
+
+@media (max-width: 768px) {
+  .pillar {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .pillar-media,
+  .pillar-text {
+    max-width: 100%;
+  }
+
+  .pillar-text {
+    text-align: center;
+  }
+}

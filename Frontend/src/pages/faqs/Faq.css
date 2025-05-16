@@ -1,0 +1,10 @@
+/* Faq.css */
+.faq-enter {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+.faq-enter-active {
+  max-height: 200px;
+}

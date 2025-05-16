@@ -1,0 +1,94 @@
+/* UserProfile.scss */
+
+.login-wrapper {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f0f9f5;
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero {
+  padding: 3rem 2rem;
+  background: linear-gradient(135deg, #10b981, #34d399);
+  color: white;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.profile-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem;
+  justify-content: center;
+}
+
+.menu-card {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  width: 300px;
+  transition: transform 0.2s ease;
+}
+
+.menu-card:hover {
+  transform: translateY(-5px);
+}
+
+.menu-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: #059669;
+}
+
+.menu-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-links li {
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+}
+
+.menu-links a,
+.menu-links .auth-link {
+  color: #059669;
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-block;
+  transition: color 0.3s;
+  cursor: pointer;
+}
+
+.menu-links a:hover,
+.menu-links .auth-link:hover {
+  color: #047857;
+}
+
+@media (max-width: 768px) {
+  .hero h2 {
+    font-size: 2rem;
+  }
+  .profile-container {
+    padding: 1rem;
+    gap: 1.5rem;
+  }
+  .menu-card {
+    width: 100%;
+  }
+}

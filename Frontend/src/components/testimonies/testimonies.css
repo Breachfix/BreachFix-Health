@@ -1,0 +1,74 @@
+/* ===== TESTIMONIES SECTION ===== */
+.testimonials-section {
+  background-color: #f0fdf4;
+  padding: 4rem 2rem;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.testimonials-section h2 {
+  font-size: 2.25rem;
+  font-weight: bold;
+  color: #047857;
+  padding: 20px;
+  margin-bottom: 3rem;
+  padding-top: 70px;
+}
+
+/* Container for all testimonials */
+.testimonial-slider {
+  position: relative;
+  overflow: hidden;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* Individual Testimonial Slide */
+.testimonial-slide {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+  justify-content: center;
+  transition: all 0.5s ease-in-out;
+}
+
+.testimonial-slide img {
+  width: 160px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.testimonial-slide p {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.testimonial-slide .author {
+  font-weight: bold;
+  color: #047857;
+}
+
+/* Hide inactive slides */
+.testimonial-slide.hidden {
+  display: none;
+}
+
+/* Responsive layout */
+@media (min-width: 768px) {
+  .testimonial-slide {
+    flex-direction: row;
+    text-align: left;
+  }
+
+  .testimonial-slide p {
+    font-size: 1.1rem;
+  }
+
+  .testimonial-slide .text-container {
+    max-width: 640px;
+  }
+}
