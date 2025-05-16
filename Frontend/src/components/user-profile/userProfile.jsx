@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import NavbarComponent from '../../components/nav/nav';
 import FooterComponent from '../../components/footer/footer';
 import { logout } from '../../services/authService';
-import './UserProfile.css';
+import './userProfile.css';
 
 const UserProfile = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
