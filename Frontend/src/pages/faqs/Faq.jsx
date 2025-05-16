@@ -1,5 +1,5 @@
 import { useState } from 'react';
-
+import './Faq.css';
 const faqs = [
   {
     question: "What is BreachFix Health?",

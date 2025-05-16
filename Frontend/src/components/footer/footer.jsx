@@ -1,6 +1,6 @@
 // Footer
 import { Link } from 'react-router-dom';
-import './Footer.css';
+import './footer.css';
 import SocialLinks from '../social-media/socials';
 
 export default function FooterComponent() {
