@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import NavbarComponent from '../../components/nav/nav';
 import FooterComponent from '../../components/footer/footer';
-import './shop.css';
+import './Shop.css';
 
 export default function Shop() {
   const [cart, setCart] = useState(() => {
