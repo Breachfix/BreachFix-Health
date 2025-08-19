@@ -1,0 +1,7 @@
+services:
+  - type: static
+    name: frontend
+    buildCommand: npm run build
+    startCommand: serve -s build
+    env:
+      - NODE_ENV=production
